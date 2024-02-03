@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.trackyourexpense"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.trackyourexpense"
@@ -66,4 +66,44 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    /**
+     * Navigation
+     */
+    // NOTE 2.4.0-alpha-07 is not working as of 8-25-2021
+    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0-alpha01")
+    implementation("androidx.navigation:navigation-ui-ktx:2.6.0-alpha01")
+    implementation ("androidx.navigation:navigation-compose:2.6.0-alpha01")
+    androidTestImplementation ("androidx.navigation:navigation-testing:2.6.0-alpha01")
+
+    /**
+     * Compose Packages
+     */
+    implementation ("androidx.compose.ui:ui:1.5.1")
+    implementation ("androidx.compose.ui:ui-tooling:1.5.1")
+    implementation ("androidx.compose.compiler:compiler:1.4.4")
+    implementation ("androidx.compose.foundation:foundation:1.5.1")
+    implementation ("androidx.compose.animation:animation:1.5.1")
+    implementation ("androidx.compose.runtime:runtime-livedata:1.5.1")
+    implementation ("com.google.accompanist:accompanist-swiperefresh:0.26.3-beta")
+    androidTestImplementation ("androidx.compose.ui:ui-test-junit4:1.5.1")
+    debugImplementation ("androidx.compose.ui:ui-test-manifest:1.5.1")
+    implementation ("androidx.compose.material:material:1.5.1")
+
+    // compose image helper
+    implementation ("io.coil-kt:coil-compose:1.3.2")
+
+    /**
+     * Hilt / Dagger
+     */
+    implementation ("com.google.dagger:hilt-android:2.48")
+    implementation ("androidx.hilt:hilt-navigation-fragment:1.0.0")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
+    androidTestImplementation ("com.google.dagger:hilt-android-testing:2.48")
+
+    /**
+     * Constraint Layouts
+     */
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation ("androidx.constraintlayout:constraintlayout-compose:1.1.0-alpha04")
 }
